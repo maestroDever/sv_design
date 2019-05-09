@@ -1,0 +1,1 @@
+<a href="{{ $url ?? '#' }}" class="btn btn-white font-bold">{{ $text }}</a>

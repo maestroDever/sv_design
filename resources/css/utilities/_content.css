@@ -1,0 +1,37 @@
+.content {
+    & li + li {
+        @apply .mt-1;
+    }
+    & p,
+    & dl,
+    & ol,
+    & ul,
+    & blockquote,
+    & pre,
+    & table {
+        &:not(:last-child) {
+            @apply .mb-4;
+        }
+    }
+    & ol {
+        @apply list-decimal ml-4 mt-4;
+    }
+    & ul {
+        @apply list-disc ml-4 mt-4;
+        & ul {
+            @apply mt-2;
+            list-style-type: circle;
+            & ul {
+                list-style-type: square;
+            }
+        }
+    }
+
+    & a:not(.btn) {
+        @apply .text-blue-600 .border-b .border-blue-300 .transition;
+
+        &:hover {
+            @apply .text-blue-800 .border-blue-400;
+        }
+    }
+}

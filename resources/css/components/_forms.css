@@ -1,0 +1,53 @@
+.form__group {
+    @apply my-2;
+}
+
+.form__label {
+    @apply text-sm font-semibold block mb-1;
+}
+
+input.form__input,
+textarea.form__input {
+    @apply appearance-none border rounded w-full py-2 px-3;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        @apply border-gray-500;
+    }
+
+    &:focus {
+        @apply border-red-500 outline-none;
+        box-shadow: 0 0 0 0.2rem rgba(233, 92, 24,.25);
+    }
+
+    &.form-error {
+        @apply border-red-500;
+    }
+
+    &.form-success {
+        @apply border-green-500;
+    }
+}
+
+select.form__select {
+    @apply block bg-white appearance-none border rounded w-full py-2 px-3;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        @apply border-gray-500;
+    }
+    &:focus {
+        @apply border-red-500 outline-none;
+        box-shadow: 0 0 0 0.2rem rgba(233, 92, 24,.25);
+    }
+}
+
+.form-error__message {
+    @apply mt-3 pl-8 relative w-full text-red-500 text-sm;
+    &:before {
+        @apply absolute w-4 h-4 border-b border-l rounded-l rounded-t-none;
+        top: -6px;
+        left: 10px;
+        content: '';
+    }
+}

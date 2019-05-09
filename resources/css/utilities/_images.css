@@ -1,0 +1,11 @@
+img {
+    @apply w-full;
+}
+
+.image {
+    @apply relative;
+
+    img {
+        @apply absolute inset-0;
+    }
+}

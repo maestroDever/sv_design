@@ -1,0 +1,7 @@
+.transition {
+    transition: all .15s ease-in-out;
+}
+
+.transition-slow {
+    transition: all .5s ease-in-out;
+}
